@@ -2,6 +2,7 @@ import 'package:azlir_portfolio/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 final colorSchemeProvider = StateProvider((ref) => ColorScheme.fromSeed(
       seedColor: Colors.blue,
@@ -9,6 +10,8 @@ final colorSchemeProvider = StateProvider((ref) => ColorScheme.fromSeed(
     ));
 
 void main() {
+  setPathUrlStrategy();
+
   runApp(
     const ProviderScope(
       child: MyApp(),
