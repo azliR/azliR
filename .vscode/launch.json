@@ -5,22 +5,18 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "portfolio",
+            "name": "azlir_portfolio",
             "request": "launch",
-            "type": "dart",
-            "args": [
-                "--web-renderer",
-                "html"
-            ]
+            "type": "dart"
         },
         {
-            "name": "portfolio (profile mode)",
+            "name": "azlir_portfolio (profile mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "profile"
         },
         {
-            "name": "portfolio (release mode)",
+            "name": "azlir_portfolio (release mode)",
             "request": "launch",
             "type": "dart",
             "flutterMode": "release"

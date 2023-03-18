@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.portfolio">
+    package="com.example.azlir_portfolio">
    <application
-        android:label="portfolio"
+        android:label="azlir_portfolio"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,57 +1,41 @@
+import 'package:azlir_portfolio/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+final colorSchemeProvider = StateProvider((ref) => ColorScheme.fromSeed(
+      seedColor: Colors.blue,
+      brightness: Brightness.dark,
+    ));
+
 void main() {
-  runApp(const MyApp());
+  runApp(
+    const ProviderScope(
+      child: MyApp(),
+    ),
+  );
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyApp extends ConsumerWidget {
+  const MyApp({super.key});
+
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final colorScheme = ref.watch(colorSchemeProvider);
+
     return MaterialApp(
-      title: 'Me',
-      theme: ThemeData(
+      title: 'Portfolio',
+      themeMode: ThemeMode.dark,
+      darkTheme: ThemeData(
+        useMaterial3: true,
         scaffoldBackgroundColor: Colors.black,
-      ),
-      home: _Body(),
-    );
-  }
-}
-
-class _Body extends StatelessWidget {
-  const _Body({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
-    return Scaffold(
-      body: Align(
-        alignment: Alignment.topRight,
-        child: Padding(
-          padding: EdgeInsets.fromLTRB(24, size.height / 3, size.width / 8, 24),
-          child: Text.rich(
-            TextSpan(
-              text: "I'm ",
-              children: [
-                TextSpan(
-                  text: 'Rizal Hadiyansah',
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-              ],
-            ),
-            style: GoogleFonts.jetBrainsMono(
-              fontSize: 36,
-              fontWeight: FontWeight.w100,
-              color: Colors.white70,
-            ),
-          ),
+        colorScheme: colorScheme,
+        textTheme: GoogleFonts.jetBrainsMonoTextTheme().apply(
+          bodyColor: Colors.white,
+          displayColor: Colors.white,
         ),
       ),
+      home: const HomePage(),
     );
   }
 }
