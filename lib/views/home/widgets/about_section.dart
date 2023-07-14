@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class AboutSection extends StatelessWidget {
-  const AboutSection({super.key, required this.colorScheme});
-
-  final ColorScheme colorScheme;
+  const AboutSection({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     return ColoredBox(
       color: colorScheme.background,
       child: Padding(
@@ -16,7 +16,6 @@ class AboutSection extends StatelessWidget {
           child: Row(
             children: [
               Expanded(
-                flex: 1,
                 child: Center(
                   child: Text(
                     'About me',

@@ -1,7 +1,7 @@
 import 'package:azlir_portfolio/main.dart';
-import 'package:azlir_portfolio/widgets/about_section.dart';
-import 'package:azlir_portfolio/widgets/home_section.dart';
-import 'package:azlir_portfolio/widgets/projects_section.dart';
+import 'package:azlir_portfolio/views/home/widgets/about_section.dart';
+import 'package:azlir_portfolio/views/home/widgets/projects_section.dart';
+import 'package:azlir_portfolio/views/widgets/home_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -10,22 +10,22 @@ enum Section {
   profile,
   projects;
 
-  ColorScheme get colorScheme {
+  ColorScheme getColorScheme(Brightness brightness) {
     switch (this) {
       case Section.home:
         return ColorScheme.fromSeed(
           seedColor: Colors.blue,
-          brightness: Brightness.dark,
+          brightness: brightness,
         );
       case Section.profile:
         return ColorScheme.fromSeed(
-          seedColor: Colors.green,
-          brightness: Brightness.light,
+          seedColor: Colors.yellow,
+          brightness: brightness,
         );
       case Section.projects:
         return ColorScheme.fromSeed(
-          seedColor: Colors.red,
-          brightness: Brightness.dark,
+          seedColor: Colors.green,
+          brightness: brightness,
         );
     }
   }
@@ -46,13 +46,14 @@ class _HomePageState extends ConsumerState<HomePage> {
   void initState() {
     _pageController.addListener(() {
       final page = _pageController.page?.round() ?? 0;
-      final section = Section.values[page];
-
-      ref
-          .read(colorSchemeProvider.notifier)
-          .update((state) => section.colorScheme);
 
       if (page != _selectedPage) {
+        final section = Section.values[page];
+
+        ref
+            .read(colorSchemeProvider.notifier)
+            .update((state) => section.getColorScheme(state.brightness));
+
         setState(() {
           _selectedPage = page;
         });
@@ -69,6 +70,8 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final brightness = ref.watch(colorSchemeProvider).brightness;
+
     return Scaffold(
       body: Row(
         children: [
@@ -83,6 +86,28 @@ class _HomePageState extends ConsumerState<HomePage> {
                 curve: Curves.easeOut,
               );
             },
+            trailing: Expanded(
+              child: Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 16),
+                  child: IconButton.outlined(
+                    onPressed: () {
+                      ref.read(colorSchemeProvider.notifier).update(
+                            (state) => state.copyWith(
+                              brightness: state.brightness == Brightness.light
+                                  ? Brightness.dark
+                                  : Brightness.light,
+                            ),
+                          );
+                    },
+                    icon: brightness == Brightness.dark
+                        ? const Icon(Icons.light_mode_outlined)
+                        : const Icon(Icons.dark_mode_outlined),
+                  ),
+                ),
+              ),
+            ),
             destinations: const [
               NavigationRailDestination(
                 icon: Icon(Icons.question_mark_rounded),
@@ -107,9 +132,9 @@ class _HomePageState extends ConsumerState<HomePage> {
               scrollDirection: Axis.vertical,
               pageSnapping: false,
               children: [
-                HomeSection(colorScheme: Section.home.colorScheme),
-                AboutSection(colorScheme: Section.profile.colorScheme),
-                ProjectsSection(colorScheme: Section.projects.colorScheme),
+                HomeSection(),
+                const AboutSection(),
+                const ProjectsSection(),
               ],
             ),
           ),

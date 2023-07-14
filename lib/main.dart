@@ -1,13 +1,15 @@
-import 'package:azlir_portfolio/home_page.dart';
+import 'package:azlir_portfolio/views/home/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:url_strategy/url_strategy.dart';
 
-final colorSchemeProvider = StateProvider((ref) => ColorScheme.fromSeed(
-      seedColor: Colors.blue,
-      brightness: Brightness.dark,
-    ));
+final colorSchemeProvider = StateProvider(
+  (ref) => ColorScheme.fromSeed(
+    seedColor: Colors.blue,
+    brightness: Brightness.dark,
+  ),
+);
 
 void main() {
   setPathUrlStrategy();
@@ -31,11 +33,10 @@ class MyApp extends ConsumerWidget {
       themeMode: ThemeMode.dark,
       darkTheme: ThemeData(
         useMaterial3: true,
-        scaffoldBackgroundColor: Colors.black,
         colorScheme: colorScheme,
-        textTheme: GoogleFonts.jetBrainsMonoTextTheme().apply(
-          bodyColor: Colors.white,
-          displayColor: Colors.white,
+        textTheme: GoogleFonts.robotoTextTheme().apply(
+          bodyColor: colorScheme.onBackground,
+          displayColor: colorScheme.onBackground,
         ),
       ),
       home: const HomePage(),
