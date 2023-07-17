@@ -40,9 +40,6 @@ class _GalleryPageState extends State<GalleryPage> {
       child: Focus(
         autofocus: true,
         child: Scaffold(
-          appBar: AppBar(
-            title: Text(widget.title),
-          ),
           body: Stack(
             children: [
               PhotoViewGallery.builder(
@@ -53,9 +50,21 @@ class _GalleryPageState extends State<GalleryPage> {
 
                   return PhotoViewGalleryPageOptions(
                     imageProvider: CachedNetworkImageProvider(image),
-                    heroAttributes: PhotoViewHeroAttributes(tag: index),
+                    heroAttributes: PhotoViewHeroAttributes(tag: image),
                   );
                 },
+              ),
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(16),
+                  child: IconButton.filledTonal(
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                    icon: const Icon(Icons.arrow_back),
+                  ),
+                ),
               ),
               Align(
                 alignment: Alignment.centerLeft,

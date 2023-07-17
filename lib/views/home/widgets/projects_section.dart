@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:azlir_portfolio/blocs/home/home_cubit.dart';
 import 'package:azlir_portfolio/core/constants.dart';
 import 'package:azlir_portfolio/models/project.dart';
@@ -46,8 +48,10 @@ class ProjectsSection extends StatelessWidget {
                     ?.copyWith(color: colorScheme.onBackground),
               ),
               const SizedBox(height: 16),
-              Row(
-                mainAxisSize: MainAxisSize.min,
+              Wrap(
+                alignment: WrapAlignment.center,
+                runAlignment: WrapAlignment.center,
+                crossAxisAlignment: WrapCrossAlignment.center,
                 children: [
                   Text(
                     'You can find my projects on ',
@@ -63,37 +67,47 @@ class ProjectsSection extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 16),
-              Wrap(
-                spacing: 8,
-                runSpacing: 8,
-                alignment: WrapAlignment.center,
-                runAlignment: WrapAlignment.center,
-                children: tags.map(
-                  (tag) {
-                    return FilterChip(
-                      label: Text(tag),
-                      selected: selectedTags.contains(tag),
-                      onSelected: (value) {
-                        if (value) {
-                          homeCubit.onSelectTag(tag);
-                        } else {
-                          homeCubit.onUnselectTag(tag);
-                        }
-                      },
-                    );
-                  },
-                ).toList(),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16),
+                child: Wrap(
+                  spacing: 8,
+                  runSpacing: 8,
+                  alignment: WrapAlignment.center,
+                  runAlignment: WrapAlignment.center,
+                  children: tags.map(
+                    (tag) {
+                      return FilterChip(
+                        label: Text(tag),
+                        selected: selectedTags.contains(tag),
+                        onSelected: (value) {
+                          if (value) {
+                            homeCubit.onSelectTag(tag);
+                          } else {
+                            homeCubit.onUnselectTag(tag);
+                          }
+                        },
+                      );
+                    },
+                  ).toList(),
+                ),
               ),
               const SizedBox(height: 16),
-              GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3),
-                shrinkWrap: true,
-                itemCount: filteredProjects.length,
-                itemBuilder: (context, index) {
-                  final project = filteredProjects[index];
+              LayoutBuilder(
+                builder: (context, constraints) {
+                  return GridView.builder(
+                    padding: const EdgeInsets.fromLTRB(8, 8, 8, 24),
+                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: max(constraints.maxWidth ~/ 300, 1),
+                      childAspectRatio: 3 / 4,
+                    ),
+                    shrinkWrap: true,
+                    itemCount: filteredProjects.length,
+                    itemBuilder: (context, index) {
+                      final project = filteredProjects[index];
 
-                  return ProjectTile(project: project);
+                      return ProjectTile(project: project);
+                    },
+                  );
                 },
               ),
             ],

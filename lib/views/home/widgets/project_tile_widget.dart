@@ -13,102 +13,102 @@ class ProjectTile extends StatelessWidget {
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
 
-    return SizedBox(
-      width: project.vertical ? 300 : 400,
-      child: Card(
-        margin: const EdgeInsets.all(8),
-        child: Padding(
-          padding: const EdgeInsets.all(8),
-          child: Flex(
-            direction: project.vertical ? Axis.vertical : Axis.horizontal,
-            children: [
-              ClipRRect(
-                borderRadius: const BorderRadius.all(Radius.circular(8)),
-                child: CachedNetworkImage(
-                  imageUrl: project.images.first,
-                  width: project.vertical ? double.infinity : null,
-                  height: project.vertical ? null : double.infinity,
-                  placeholder: (context, url) {
-                    return const Center(
-                      child: CircularProgressIndicator(),
-                    );
-                  },
+    return Card(
+      margin: const EdgeInsets.all(8),
+      child: Padding(
+        padding: const EdgeInsets.all(8),
+        child: Flex(
+          direction: project.vertical ? Axis.vertical : Axis.horizontal,
+          children: [
+            Flexible(
+              flex: project.vertical ? 0 : 1,
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: Hero(
+                  tag: project.images.first,
+                  child: ClipRRect(
+                    borderRadius: const BorderRadius.all(Radius.circular(8)),
+                    child: CachedNetworkImage(
+                      imageUrl: project.images.first,
+                      placeholder: (context, url) {
+                        return const Center(
+                          child: CircularProgressIndicator(),
+                        );
+                      },
+                    ),
+                  ),
                 ),
               ),
-              SizedBox(
-                width: project.vertical ? 0 : 12,
-                height: project.vertical ? 8 : 0,
-              ),
-              Expanded(
-                child: ConstrainedBox(
-                  constraints: BoxConstraints(
-                    minWidth: project.vertical ? 0 : 200,
-                    minHeight: project.vertical ? 200 : 0,
-                  ),
-                  child: Column(
-                    crossAxisAlignment: project.vertical
-                        ? CrossAxisAlignment.center
-                        : CrossAxisAlignment.start,
-                    children: [
-                      SelectableText(
-                        project.name,
-                        style: textTheme.titleMedium,
+            ),
+            SizedBox(
+              width: project.vertical ? 0 : 12,
+              height: project.vertical ? 8 : 0,
+            ),
+            Expanded(
+              child: ConstrainedBox(
+                constraints: BoxConstraints(
+                  minWidth: project.vertical ? 0 : 200,
+                  minHeight: project.vertical ? 200 : 0,
+                ),
+                child: Column(
+                  crossAxisAlignment: project.vertical
+                      ? CrossAxisAlignment.center
+                      : CrossAxisAlignment.start,
+                  children: [
+                    SelectableText(
+                      project.name,
+                      style: textTheme.titleMedium,
+                      textAlign:
+                          project.vertical ? TextAlign.center : TextAlign.start,
+                    ),
+                    const SizedBox(height: 2),
+                    Flexible(
+                      flex: 0,
+                      child: SelectableText(
+                        project.shortDescription,
+                        style: textTheme.bodySmall?.copyWith(
+                          overflow: TextOverflow.ellipsis,
+                        ),
                         textAlign: project.vertical
                             ? TextAlign.center
                             : TextAlign.start,
                       ),
-                      const SizedBox(height: 2),
-                      SizedBox(
-                        width: double.infinity,
-                        child: SelectableText(
-                          project.shortDescription,
-                          style: textTheme.bodySmall?.copyWith(
-                            overflow: TextOverflow.ellipsis,
-                          ),
-                          minLines: 1,
-                          maxLines: project.vertical ? 3 : 8,
-                          textAlign: project.vertical
-                              ? TextAlign.center
-                              : TextAlign.start,
-                        ),
+                    ),
+                    if (project.platforms != null) ...[
+                      const SizedBox(height: 8),
+                      WrapTags(
+                        alignment: project.vertical
+                            ? WrapAlignment.center
+                            : WrapAlignment.start,
+                        runAlignment: project.vertical
+                            ? WrapAlignment.center
+                            : WrapAlignment.start,
+                        tags: project.platforms!,
                       ),
-                      if (project.platforms != null) ...[
-                        const SizedBox(height: 8),
-                        WrapTags(
-                          alignment: project.vertical
-                              ? WrapAlignment.center
-                              : WrapAlignment.start,
-                          runAlignment: project.vertical
-                              ? WrapAlignment.center
-                              : WrapAlignment.start,
-                          tags: project.platforms!,
-                        ),
-                      ],
-                      const SizedBox(height: 8),
-                      const Spacer(),
-                      const SizedBox(height: 8),
-                      SizedBox(
-                        width: double.infinity,
-                        child: FilledButton.tonal(
-                          onPressed: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute<void>(
-                                builder: (context) =>
-                                    ProjectDetailPage(id: project.id),
-                              ),
-                            );
-                          },
-                          child: const Text('Detail'),
-                        ),
-                      ),
-                      const SizedBox(height: 8),
                     ],
-                  ),
+                    const Spacer(),
+                    const SizedBox(height: 8),
+                    SizedBox(
+                      width: double.infinity,
+                      child: FilledButton.tonal(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (context) =>
+                                  ProjectDetailPage(id: project.id),
+                            ),
+                          );
+                        },
+                        child: const Text('Detail'),
+                      ),
+                    ),
+                    const SizedBox(height: 8),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

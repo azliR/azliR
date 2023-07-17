@@ -14,17 +14,17 @@ enum Section {
     switch (this) {
       case Section.home:
         return ColorScheme.fromSeed(
-          seedColor: Colors.blue,
+          seedColor: Colors.red,
           brightness: brightness,
         );
       case Section.profile:
         return ColorScheme.fromSeed(
-          seedColor: Colors.yellow,
+          seedColor: Colors.green,
           brightness: brightness,
         );
       case Section.projects:
         return ColorScheme.fromSeed(
-          seedColor: Colors.green,
+          seedColor: Colors.blue,
           brightness: brightness,
         );
     }
@@ -48,7 +48,8 @@ class _HomePageState extends State<HomePage> {
     _pageController.addListener(() {
       final page = _pageController.page?.round() ?? 0;
 
-      if (page != homeCubit.state.selectedSection) {
+      if (page != homeCubit.state.selectedSection &&
+          page < Section.values.length) {
         final section = Section.values[page];
         final colorScheme =
             section.getColorScheme(homeCubit.state.colorScheme.brightness);
@@ -136,14 +137,18 @@ class _HomePageState extends State<HomePage> {
           ),
           const VerticalDivider(width: 2),
           Expanded(
-            child: PageView(
+            child: CustomScrollView(
               controller: _pageController,
-              scrollDirection: Axis.vertical,
-              pageSnapping: false,
-              children: const [
-                HomeSection(),
-                AboutSection(),
-                ProjectsSection(),
+              slivers: const [
+                SliverToBoxAdapter(
+                  child: HomeSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: AboutSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: ProjectsSection(),
+                ),
               ],
             ),
           ),

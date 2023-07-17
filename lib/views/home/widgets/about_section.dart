@@ -7,8 +7,10 @@ class AboutSection extends StatelessWidget {
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
 
-    return ColoredBox(
-      color: colorScheme.background,
+    final size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      height: size.height,
       child: Padding(
         padding: const EdgeInsets.all(24),
         child: Align(

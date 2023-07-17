@@ -9,10 +9,7 @@ class HomeState extends Equatable {
   });
 
   factory HomeState.initial() => HomeState(
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.blue,
-          brightness: Brightness.dark,
-        ),
+        colorScheme: Section.home.getColorScheme(Brightness.dark),
         selectedSection: 0,
         selectedTags: const [],
       );

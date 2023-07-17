@@ -32,7 +32,7 @@ Sholawatan is a great way to learn about and listen to shalawat, and it is a val
     tags: [
       'Flutter',
       'DDD Architecture',
-      'BloC library',
+      'BloC Library',
       'Firebase',
     ],
     platforms: [
@@ -41,7 +41,7 @@ Sholawatan is a great way to learn about and listen to shalawat, and it is a val
       'Web',
     ],
     documents: {
-      'System Requirements':
+      'System Requirements (ID)':
           'https://docs.google.com/document/d/1cvFdXd-qPObMQHXB3l2j9BcYrru7bcx_i4IdwQ_3tSw',
     },
     images: [
@@ -114,7 +114,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
       'Android',
     ],
     documents: {
-      'Journal article':
+      'Journal article (ID)':
           'https://docs.google.com/document/d/1BLEHKPyrybhqMCJxjNtQ5xlN5gNTKaxsVHlhqIVvlyw'
     },
     images: [
@@ -162,7 +162,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
     ],
     sourceCode: 'https://github.com/azliR/murojaah-ml',
     documents: {
-      'Journal article':
+      'Journal article (ID)':
           'https://docs.google.com/document/d/1D0M_eBCysvMOeeEm3lOMzgGzjD7HPJepzKdev7H0XzM',
     },
     images: [
@@ -242,8 +242,10 @@ SI-Sekolah is a powerful and flexible school information system that can help sc
     platforms: ['Web'],
     sourceCode: 'https://github.com/azliR/laravel_si-sekolah',
     documents: {
-      'System Requirements':
+      'System Requirements (ID)':
           'https://docs.google.com/document/d/16A9-nVA0Wra1SfMjnea28vkLH0rW-7oYFNWHU6-x4zA',
+      'System Testing (ID)':
+          'https://docs.google.com/document/d/1acyzMiJ2stYo8yv0HW_waX5ovsz_rYO59lWeINPkC3w',
     },
     images: [
       'https://cdn.azlir.me/laravel_si-sekolah/laravel_si-sekolah-0.webp',
@@ -256,6 +258,143 @@ SI-Sekolah is a powerful and flexible school information system that can help sc
       'https://cdn.azlir.me/laravel_si-sekolah/laravel_si-sekolah-7.webp',
       'https://cdn.azlir.me/laravel_si-sekolah/laravel_si-sekolah-8.webp',
     ],
+    vertical: true,
+  ),
+  Project(
+    id: '6',
+    name: 'Restauran App',
+    shortDescription:
+        'Restaurant app built with Flutter for all platforms (Android, iOS, MacOS, Windows, Linux, Web)',
+    description: '''
+**Restaurant App**
+
+I developed the Restaurant App, a mobile app that helps customers order food from their favorite restaurants without having to worry about queues or full tables. The app features a search function that allows users to find restaurants by location, cuisine, or price range. Users can also see the state of the restaurant, such as the current wait time and the availability of tables. In addition, the app allows users to book tables, order food directly from the app, and schedule orders.
+
+The Restaurant App was built using Flutter, Firebase Auth, PostgreSQL, the Bloc library, localizations, and Maps. The app is available on Android, iOS, MacOS, Windows, and Linux.
+
+**Key features**
+
+* Search for restaurants by location, cuisine, or price range
+* See the state of the restaurant, such as the current wait time and the availability of tables
+* Book tables
+* Order food directly from the app
+* Schedule orders
+
+**Benefits**
+
+* Save time by ordering food from your favorite restaurants without having to wait in line
+* Avoid full tables by seeing the state of the restaurant before you go
+* Book tables in advance so you don't have to worry about finding a seat
+* Schedule orders so your food is ready when you are
+
+**Skills demonstrated**
+
+The development of the Restaurant App demonstrates the following skills:
+
+* Flutter mobile development
+* Firebase backend development
+* PostgreSQL database management
+* Bloc state management
+* Localization
+* Maps integration
+* Cross-platform development
+
+**Conclusion**
+
+The Restaurant App is a valuable tool for anyone who wants to order food from their favorite restaurants without having to worry about queues or full tables. The app is easy to use and features a number of innovative features that make it a valuable addition to any smartphone.
+''',
+    tags: ['Flutter', 'Firebase', 'BloC Library', 'Localizations', 'Maps'],
+    platforms: ['Android', 'iOS', 'macOS', 'Windows', 'Linux', 'Web'],
+    documents: {
+      'System Requirements (ID)':
+          'https://docs.google.com/document/d/18_b6HGrQufQ2BeKz_AxcEt0JyHuDtWp_8S-Nll-bljQ',
+      'System Testing (ID)':
+          'https://docs.google.com/document/d/1BMMtPtRGuXFIhr3L7Lo73P5kA1BlbVsUzX7_o-1Nmgg',
+    },
+    sourceCode: 'https://github.com/azliR/flutter_restaurant',
+    images: [
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-0.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-1.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-2.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-3.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-4.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-5.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-6.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-7.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-8.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-9.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-10.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-11.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-12.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-13.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-14.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-15.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-16.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-17.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-18.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-19.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-20.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-21.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-22.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-23.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-24.webp',
+      'https://cdn.azlir.me/flutter_restaurant/flutter_restaurant-25.webp',
+    ],
+    vertical: false,
+  ),
+  Project(
+    id: '7',
+    name: 'Dart Restaurant API',
+    description: '''
+**Dart Restaurant API**
+
+I developed the Dart Restaurant API, a RESTful API that provides a backend for the Restaurant App. The API includes endpoints for user authentication, nearby stores, special offers, orders, item subdirectories, item categories, items, and stores.
+
+The API was built using Dart, the shelf package, PostgreSQL, Firebase, Redis, and JWT.
+
+**Features**
+
+* User authentication
+* Nearby stores
+* Special offers
+* Orders
+* Item subdirectories
+* Item categories
+* Items
+* Stores
+
+**Benefits**
+
+* The API is scalable and reliable.
+* The API is secure and uses industry-standard security protocols.
+
+**Skills demonstrated**
+
+The development of the Dart Restaurant API demonstrates the following skills:
+
+* Dart development
+* RESTful API development
+* PostgreSQL database development
+* Firebase development
+* Redis development
+* JWT development
+
+**Conclusion**
+
+The Dart Restaurant API is a valuable tool for anyone who wants to develop a restaurant app. The API is easy to use and it is scalable and reliable. I am proud of the work that I did on the Dart Restaurant API, and I believe that it demonstrates my skills as a software developer.
+
+I am happy to share more details about the Dart Restaurant API if you are interested.
+''',
+    shortDescription:
+        'API for Restaurant App built with Dart with Shelf package',
+    tags: ['Dart', 'Shelf', 'PostgreSQL', 'Firebase', 'Redis', 'JWT'],
+    images: [
+      'https://cdn.azlir.me/dart_restaurant-api/dart_restaurant-api-0.webp',
+      'https://cdn.azlir.me/dart_restaurant-api/dart_restaurant-api-1.webp',
+    ],
+    documents: {
+      'Progress': 'https://github.com/azliR/IF214002',
+    },
     vertical: true,
   ),
 ];

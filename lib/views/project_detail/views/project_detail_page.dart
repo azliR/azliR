@@ -59,16 +59,17 @@ class ProjectDetailPage extends StatelessWidget {
                     project: project,
                     index: index,
                   ),
-                  child: Card(
-                    clipBehavior: Clip.antiAlias,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: const BorderRadius.all(Radius.circular(16)),
-                      side: BorderSide(
-                        color: colorScheme.outline,
+                  child: Hero(
+                    tag: image,
+                    child: Card(
+                      clipBehavior: Clip.antiAlias,
+                      shape: RoundedRectangleBorder(
+                        borderRadius:
+                            const BorderRadius.all(Radius.circular(16)),
+                        side: BorderSide(
+                          color: colorScheme.outline,
+                        ),
                       ),
-                    ),
-                    child: Hero(
-                      tag: index,
                       child: CachedNetworkImage(
                         imageUrl: image,
                         progressIndicatorBuilder: (context, url, progress) =>
@@ -80,7 +81,7 @@ class ProjectDetailPage extends StatelessWidget {
               },
               options: CarouselOptions(
                 height: size.height * 0.6,
-                viewportFraction: 0.2,
+                viewportFraction: 0.4,
                 enlargeCenterPage: true,
                 enableInfiniteScroll: false,
                 enlargeStrategy: CenterPageEnlargeStrategy.zoom,
@@ -136,12 +137,12 @@ class ProjectDetailPage extends StatelessWidget {
                             ),
                             const SizedBox(height: 8),
                             WrapTags(tags: project.tags),
-                            const SizedBox(height: 24),
-                            Text(
-                              'Platforms:',
-                              style: textTheme.titleMedium,
-                            ),
                             if (project.platforms != null) ...[
+                              const SizedBox(height: 24),
+                              Text(
+                                'Platforms:',
+                                style: textTheme.titleMedium,
+                              ),
                               const SizedBox(height: 8),
                               WrapTags(tags: project.platforms!),
                             ],
