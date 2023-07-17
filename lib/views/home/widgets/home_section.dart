@@ -8,8 +8,10 @@ class HomeSection extends StatelessWidget {
     final textTheme = Theme.of(context).textTheme;
     final colorScheme = Theme.of(context).colorScheme;
 
-    return ColoredBox(
-      color: colorScheme.background,
+    final size = MediaQuery.of(context).size;
+
+    return SizedBox(
+      height: size.height,
       child: Align(
         alignment: Alignment.centerRight,
         child: Padding(

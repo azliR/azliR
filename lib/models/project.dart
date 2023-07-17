@@ -4,7 +4,7 @@ class Project {
     required this.name,
     required this.description,
     required this.shortDescription,
-    required this.technologies,
+    required this.tags,
     required this.images,
     required this.vertical,
     this.platforms,
@@ -18,7 +18,7 @@ class Project {
   final String shortDescription;
   final String? sourceCode;
   final List<String>? visits;
-  final List<String> technologies;
+  final List<String> tags;
   final List<String>? platforms;
   final Map<String, String>? documents;
   final List<String> images;

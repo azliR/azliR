@@ -16,6 +16,7 @@ class ProjectTile extends StatelessWidget {
     return SizedBox(
       width: project.vertical ? 300 : 400,
       child: Card(
+        margin: const EdgeInsets.all(8),
         child: Padding(
           padding: const EdgeInsets.all(8),
           child: Flex(
@@ -52,6 +53,9 @@ class ProjectTile extends StatelessWidget {
                       SelectableText(
                         project.name,
                         style: textTheme.titleMedium,
+                        textAlign: project.vertical
+                            ? TextAlign.center
+                            : TextAlign.start,
                       ),
                       const SizedBox(height: 2),
                       SizedBox(
@@ -62,7 +66,7 @@ class ProjectTile extends StatelessWidget {
                             overflow: TextOverflow.ellipsis,
                           ),
                           minLines: 1,
-                          maxLines: project.vertical ? 3 : 6,
+                          maxLines: project.vertical ? 3 : 8,
                           textAlign: project.vertical
                               ? TextAlign.center
                               : TextAlign.start,

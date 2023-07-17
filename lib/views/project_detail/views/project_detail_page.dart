@@ -135,7 +135,7 @@ class ProjectDetailPage extends StatelessWidget {
                               style: textTheme.titleMedium,
                             ),
                             const SizedBox(height: 8),
-                            WrapTags(tags: project.technologies),
+                            WrapTags(tags: project.tags),
                             const SizedBox(height: 24),
                             Text(
                               'Platforms:',
