@@ -1,9 +1,5 @@
-import 'dart:math';
-
 import 'package:azlir_portfolio/blocs/home/home_cubit.dart';
 import 'package:azlir_portfolio/core/constants.dart';
-import 'package:azlir_portfolio/models/project.dart';
-import 'package:azlir_portfolio/views/home/widgets/project_tile_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
@@ -27,18 +23,6 @@ class ProjectsSection extends StatelessWidget {
     return BlocSelector<HomeCubit, HomeState, List<String>>(
       selector: (state) => state.selectedTags,
       builder: (context, selectedTags) {
-        List<Project> filteredProjects;
-
-        if (selectedTags.isNotEmpty) {
-          filteredProjects = projects.where(
-            (project) {
-              return project.tags.any((tag) => selectedTags.contains(tag));
-            },
-          ).toList();
-        } else {
-          filteredProjects = projects;
-        }
-
         return Column(
           children: [
             Text(
@@ -92,24 +76,6 @@ class ProjectsSection extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 16),
-            LayoutBuilder(
-              builder: (context, constraints) {
-                return GridView.builder(
-                  padding: const EdgeInsets.fromLTRB(8, 8, 8, 24),
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: max(constraints.maxWidth ~/ 300, 1),
-                    childAspectRatio: 3 / 4,
-                  ),
-                  shrinkWrap: true,
-                  itemCount: filteredProjects.length,
-                  itemBuilder: (context, index) {
-                    final project = filteredProjects[index];
-
-                    return ProjectTile(project: project);
-                  },
-                );
-              },
-            ),
           ],
         );
       },

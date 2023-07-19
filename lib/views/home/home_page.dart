@@ -1,10 +1,15 @@
+import 'dart:math';
+
 import 'package:azlir_portfolio/blocs/home/home_cubit.dart';
+import 'package:azlir_portfolio/notifier/home/home_notifier.dart' as nt;
 import 'package:azlir_portfolio/views/home/widgets/about_section.dart';
 import 'package:azlir_portfolio/views/home/widgets/contacts_section.dart';
 import 'package:azlir_portfolio/views/home/widgets/home_section.dart';
+import 'package:azlir_portfolio/views/home/widgets/projects_grid_widget.dart';
 import 'package:azlir_portfolio/views/home/widgets/projects_section.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 enum Section {
   home,
@@ -38,19 +43,20 @@ enum Section {
   }
 }
 
-class HomePage extends StatefulWidget {
+class HomePage extends ConsumerStatefulWidget {
   const HomePage({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  ConsumerState<HomePage> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends ConsumerState<HomePage> {
   final _pageController = PageController();
 
   @override
   void initState() {
     final homeCubit = context.read<HomeCubit>();
+    final homeState = ref.read(nt.homeProvider);
 
     _pageController.addListener(() {
       final page = _pageController.page?.round() ?? 0;
@@ -58,12 +64,19 @@ class _HomePageState extends State<HomePage> {
       if (page != homeCubit.state.selectedSection &&
           page < Section.values.length) {
         final section = Section.values[page];
-        final colorScheme =
-            section.getColorScheme(homeCubit.state.colorScheme.brightness);
 
-        homeCubit
-          ..onColorSchemeChanged(colorScheme)
+        ref.read(nt.homeProvider.notifier)
+          ..onColorSchemeChanged(
+            section.getColorScheme(homeState.colorScheme.brightness),
+          )
           ..onSelectedSectionChanged(page);
+
+        // final colorScheme =
+        //     section.getColorScheme(homeCubit.state.colorScheme.brightness);
+
+        // homeCubit
+        //   ..onColorSchemeChanged(colorScheme)
+        //   ..onSelectedSectionChanged(page);
       }
     });
     super.initState();
@@ -149,22 +162,29 @@ class _HomePageState extends State<HomePage> {
           ),
           const VerticalDivider(width: 2),
           Expanded(
-            child: CustomScrollView(
-              controller: _pageController,
-              slivers: const [
-                SliverToBoxAdapter(
-                  child: HomeSection(),
-                ),
-                SliverToBoxAdapter(
-                  child: AboutSection(),
-                ),
-                SliverToBoxAdapter(
-                  child: ProjectsSection(),
-                ),
-                SliverToBoxAdapter(
-                  child: ContactsSection(),
-                ),
-              ],
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return CustomScrollView(
+                  controller: _pageController,
+                  slivers: [
+                    const SliverToBoxAdapter(
+                      child: HomeSection(),
+                    ),
+                    const SliverToBoxAdapter(
+                      child: AboutSection(),
+                    ),
+                    const SliverToBoxAdapter(
+                      child: ProjectsSection(),
+                    ),
+                    ProjectsGrid(
+                      crossAxisCount: max(constraints.maxWidth ~/ 300, 1),
+                    ),
+                    const SliverToBoxAdapter(
+                      child: ContactsSection(),
+                    ),
+                  ],
+                );
+              },
             ),
           ),
         ],
