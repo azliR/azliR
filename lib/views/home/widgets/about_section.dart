@@ -31,7 +31,13 @@ class AboutSection extends StatelessWidget {
               Expanded(
                 flex: 2,
                 child: Text(
-                  'I am a Flutter developer',
+                  '''
+Hi! I am a mobile application developer, especially using the Flutter SDK. I can help you build apps with beautiful design, either from Figma, Adobe XD, or our creative design. My expertise in state management is using BloC with clean architecture, so that the lines of code are clean, modular, structured, and easily testable, making them easy to maintain.
+
+I have worked in other fields as well such as web, backend, database and machine learning. You can see some of the projects I've worked on on the Projects page.
+
+I look forward to working with you to design and provide the right solution to fit your budget, deadlines, and requirements. Together, let's turn your creative ideas into extraordinary products!
+''',
                   style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         color: colorScheme.onBackground,
                       ),

@@ -7,19 +7,31 @@
         {
             "name": "azlir_portfolio",
             "request": "launch",
-            "type": "dart"
+            "type": "dart",
+            "args": [
+                "--web-port",
+                "4000"
+            ]
         },
         {
             "name": "azlir_portfolio (profile mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "flutterMode": "profile",
+            "args": [
+                "--web-port",
+                "4000"
+            ]
         },
         {
             "name": "azlir_portfolio (release mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "flutterMode": "release",
+            "args": [
+                "--web-port",
+                "4000"
+            ]
         }
     ]
 }

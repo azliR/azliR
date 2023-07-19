@@ -1,5 +1,6 @@
 import 'package:azlir_portfolio/blocs/home/home_cubit.dart';
 import 'package:azlir_portfolio/views/home/widgets/about_section.dart';
+import 'package:azlir_portfolio/views/home/widgets/contacts_section.dart';
 import 'package:azlir_portfolio/views/home/widgets/home_section.dart';
 import 'package:azlir_portfolio/views/home/widgets/projects_section.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +9,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 enum Section {
   home,
   profile,
-  projects;
+  projects,
+  contacts;
 
   ColorScheme getColorScheme(Brightness brightness) {
     switch (this) {
@@ -19,12 +21,17 @@ enum Section {
         );
       case Section.profile:
         return ColorScheme.fromSeed(
-          seedColor: Colors.green,
+          seedColor: Colors.yellow,
           brightness: brightness,
         );
       case Section.projects:
         return ColorScheme.fromSeed(
           seedColor: Colors.blue,
+          brightness: brightness,
+        );
+      case Section.contacts:
+        return ColorScheme.fromSeed(
+          seedColor: Colors.green,
           brightness: brightness,
         );
     }
@@ -131,6 +138,11 @@ class _HomePageState extends State<HomePage> {
                     selectedIcon: Icon(Icons.emoji_events),
                     label: Text('Projects'),
                   ),
+                  NavigationRailDestination(
+                    icon: Icon(Icons.call_outlined),
+                    selectedIcon: Icon(Icons.call_rounded),
+                    label: Text('Contacts'),
+                  ),
                 ],
               );
             },
@@ -148,6 +160,9 @@ class _HomePageState extends State<HomePage> {
                 ),
                 SliverToBoxAdapter(
                   child: ProjectsSection(),
+                ),
+                SliverToBoxAdapter(
+                  child: ContactsSection(),
                 ),
               ],
             ),
