@@ -12,27 +12,38 @@ class HomeSection extends StatelessWidget {
 
     return SizedBox(
       height: size.height,
-      child: Align(
-        alignment: Alignment.centerRight,
-        child: Padding(
-          padding: const EdgeInsets.all(24),
-          child: Text.rich(
-            TextSpan(
-              text: "I'm ",
-              style:
-                  textTheme.headlineLarge?.copyWith(color: colorScheme.outline),
-              children: [
+      child: Stack(
+        children: [
+          Align(
+            alignment: Alignment.centerRight,
+            child: Padding(
+              padding: const EdgeInsets.all(24),
+              child: Text.rich(
                 TextSpan(
-                  text: 'Rizal Hadiyansah',
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    color: colorScheme.onBackground,
-                  ),
+                  text: "I'm ",
+                  style: textTheme.headlineLarge
+                      ?.copyWith(color: colorScheme.outline),
+                  children: [
+                    TextSpan(
+                      text: 'Rizal Hadiyansah',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: colorScheme.onBackground,
+                      ),
+                    ),
+                  ],
                 ),
-              ],
+              ),
             ),
           ),
-        ),
+          const Align(
+            alignment: Alignment.bottomCenter,
+            child: Padding(
+              padding: EdgeInsets.all(24),
+              child: Icon(Icons.expand_more_rounded),
+            ),
+          )
+        ],
       ),
     );
   }
