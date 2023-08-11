@@ -2,7 +2,7 @@ import 'package:azlir_portfolio/models/project.dart';
 
 const projects = [
   Project(
-    id: '0',
+    id: '06215fa1-a83a-447d-8ac0-63584f483ba9',
     name: 'Sholawatan',
     shortDescription:
         'A lyric app that allows users to find and listen to shalawat (praises) to the Prophet Muhammad',
@@ -32,7 +32,7 @@ Sholawatan is a great way to learn about and listen to shalawat, and it is a val
     tags: [
       'Flutter',
       'DDD Architecture',
-      'BloC Library',
+      'State Management',
       'Firebase',
     ],
     platforms: [
@@ -75,7 +75,105 @@ Sholawatan is a great way to learn about and listen to shalawat, and it is a val
     vertical: true,
   ),
   Project(
-    id: '1',
+    id: 'ee2bc423-ca60-4545-949a-53b29f922513',
+    name: 'OutClass',
+    description: '''
+**OutClass**
+
+OutClass is a web app that helps students organize their classwork and collaborate with each other. OutClass solves the problems of forgotten assignments, disorganized files, and difficult-to-remember class schedules.
+
+OutClass has the following features:
+
+* **Classroom management:** Users can create classrooms and manage them, including adding and removing students, creating and editing tasks, and viewing a list of all tasks in the classroom.
+* **File organization:** Users can upload files to their classrooms and organize them into folders. Files can be stored offline using IndexedDB.
+* **Task management:** Users can create, edit, delete, and view tasks in their classrooms. Tasks can be assigned due dates and reminders.
+* **Collaboration:** All users in a classroom can see the same list of tasks and files. This makes it easy for students to collaborate on assignments and to share materials with other students.
+
+OutClass was built using the following technologies:
+
+* **Vue3:** The Vue3 framework was used to build the front end of OutClass. Vue3 is a modern JavaScript framework that is easy to use and maintain.
+* **Pinia:** Pinia is a state management library that was used to manage the state of OutClass. Pinia is lightweight and easy to use, making it a good choice for small to medium-sized apps.
+* **IndexedDB:** IndexedDB is a web API that was used to store files offline in OutClass. IndexedDB is a reliable and scalable way to store data offline.
+* **GoFiber:** GoFiber is a web framework that was used to build the backend of OutClass. GoFiber is a high-performance and scalable web framework that is well-suited for building web apps.
+* **MongoDB:** MongoDB is a NoSQL database that was used to store data in OutClass. MongoDB is a flexible and scalable database that is a good choice for storing data in web apps.
+* **Redis:** Redis is a key-value store that was used to store JWT tokens in OutClass. Redis is a fast and reliable key-value store that is a good choice for storing short-lived data.
+
+OutClass is a valuable tool for students who want to stay organized and productive. The app is easy to use and has a number of features that make it a great choice for managing classwork. I am proud of the work that I did on OutClass, and I believe that it demonstrates my skills as a software developer.
+
+Here are some specific skills that I demonstrated in the development of OutClass:
+
+* **Web development:** I used Vue3, Pinia, IndexedDB, GoFiber, MongoDB, and Redis to build OutClass. These are all modern and popular technologies that are used to build web apps.
+* **State management:** I used Pinia to manage the state of OutClass. Pinia is a lightweight and easy-to-use state management library that is a good choice for small to medium-sized apps.
+* **Offline storage:** I used IndexedDB to store files offline in OutClass. IndexedDB is a reliable and scalable way to store data offline.
+
+I am confident that my skills and experience in developing OutClass would be a valuable asset to any team. I am a hard worker and I am always willing to learn new things. I am also a team player and I am always willing to help others. I am confident that I would be a great addition to your team.
+''',
+    shortDescription:
+        'OutClass is a web app that helps students organize their classwork and collaborate with each other that solves the problems of forgotten assignments, disorganized files, and difficult-to-remember class schedules.',
+    tags: ['Vue', 'Go', 'State Management', 'MongoDB', 'Redis', 'IndexedDB'],
+    platforms: ['Web'],
+    sourceCode: 'https://github.com/azliR/vue_outclass',
+    visits: ['https://outclass.azlir.my.id'],
+    images: [
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-0.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-1.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-2.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-3.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-4.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-5.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-6.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-7.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-8.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-9.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-10.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-11.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-12.webp',
+      'https://cdn.azlir.me/vue_outclass/vue_outclass-13.webp',
+    ],
+    vertical: true,
+  ),
+  Project(
+    id: '16c9bf86-74c6-4125-991c-92fb9499d6b9',
+    name: 'OutClass API',
+    description: '''
+**OutClass API**
+
+I developed the OutClass API, a RESTful API that provides a backend for the OutClass app. The API is built using GoFiber, MongoDB, and Redis.
+
+The API includes endpoints for the following:
+
+* **User management:** Creating, updating, and deleting users.
+* **Classroom management:** Creating, updating, and deleting classrooms.
+* **Task management:** Creating, updating, and deleting tasks.
+* **Event management:** Creating, updating, and deleting events.
+* **File management:** Uploading, downloading, and deleting files.
+
+The API is easy to use and well-documented. It is also scalable and reliable.
+
+The development of the OutClass API demonstrates the following skills:
+
+* **Go development:** I used GoFiber to build the OutClass API. GoFiber is a high-performance and scalable web framework that is well-suited for building APIs.
+* **MongoDB:** I used MongoDB to store data in the OutClass API. MongoDB is a flexible and scalable database that is a good choice for storing data in APIs.
+* **Redis:** I used Redis to store JWT tokens in the OutClass API. Redis is a fast and reliable key-value store that is a good choice for storing short-lived data.
+* **RESTful API development:** I developed the OutClass API in accordance with the RESTful API architectural style. This makes the API easy to use and understand.
+
+I am proud of the work that I did on the OutClass API, and I believe that it demonstrates my skills as a software developer. I am confident that my skills and experience in developing the OutClass API would be a valuable asset to any team.
+''',
+    shortDescription:
+        'The OutClass API is a RESTful API that provides a backend for the OutClass app, built using GoFiber, MongoDB, and Redis.',
+    sourceCode: 'https://github.com/azliR/gofiber_outclass-api',
+    visits: [
+      'https://god.gw.postman.com/run-collection/8199375-ab9fdf9c-b168-4865-86d4-7517b3df9509?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D8199375-ab9fdf9c-b168-4865-86d4-7517b3df9509%26entityType%3Dcollection%26workspaceId%3D0e796c68-046f-4e51-a7f8-b80bb0834952'
+    ],
+    tags: ['Go', 'MongoDB', 'Redis', 'RESTful API'],
+    images: [
+      'https://cdn.azlir.me/gofiber_outclass-api/gofiber_outclass-api-0.webp',
+      'https://cdn.azlir.me/gofiber_outclass-api/gofiber_outclass-api-1.webp',
+    ],
+    vertical: false,
+  ),
+  Project(
+    id: '9f34cb46-0a99-4eb4-b73a-c3b84d51ee66',
     name: 'CompressIt',
     shortDescription:
         'A compression and convertion App for images (JPEG, PNG, HEIC, and WebP) and audio locally without server',
@@ -130,7 +228,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
     vertical: false,
   ),
   Project(
-    id: '3',
+    id: 'd89d7273-9c9d-4128-a63b-e66ab1352f1a',
     name: 'Murojaah-ml',
     description: '''
 **Murojaah-ml** is a machine learning model that can classify the recitation of Quranic verses. It is built with TensorFlow Keras and CNN, and it uses a convolutional neural network to extract features from the audio recordings of the verses. The model is able to classify the verses with high accuracy, and it can be used to help Muslims learn and memorize the Quran.
@@ -173,7 +271,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
     vertical: false,
   ),
   Project(
-    id: '4',
+    id: '613b4548-f921-40a6-b6e0-1e99d39e58d9',
     name: 'Murojaah Web',
     sourceCode: 'https://github.com/azliR/flutter_murojaah-web',
     platforms: [
@@ -208,6 +306,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
       'Flutter',
       'Firebase',
     ],
+    visits: ['https://murojaah.azlir.me/'],
     images: [
       'https://cdn.azlir.me/flutter_murojaah-web/flutter_murojaah-web-0.webp',
       'https://cdn.azlir.me/flutter_murojaah-web/flutter_murojaah-web-1.webp',
@@ -218,7 +317,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
     vertical: true,
   ),
   Project(
-    id: '5',
+    id: 'cf13a5de-6f9c-4280-b8eb-e75128b769d9',
     name: 'SI-Sekolah (School Information System)',
     shortDescription:
         'A web to simplify school management, made with Laravel and MariaDB',
@@ -261,7 +360,7 @@ SI-Sekolah is a powerful and flexible school information system that can help sc
     vertical: true,
   ),
   Project(
-    id: '6',
+    id: '17736969-fadb-4c3e-b38a-92443c774b05',
     name: 'Restauran App',
     shortDescription:
         'Restaurant app built with Flutter for all platforms (Android, iOS, MacOS, Windows, Linux, Web)',
@@ -303,7 +402,7 @@ The development of the Restaurant App demonstrates the following skills:
 
 The Restaurant App is a valuable tool for anyone who wants to order food from their favorite restaurants without having to worry about queues or full tables. The app is easy to use and features a number of innovative features that make it a valuable addition to any smartphone.
 ''',
-    tags: ['Flutter', 'Firebase', 'BloC Library', 'Localizations', 'Maps'],
+    tags: ['Flutter', 'Firebase', 'State Management', 'Localizations', 'Maps'],
     platforms: ['Android', 'iOS', 'macOS', 'Windows', 'Linux', 'Web'],
     documents: {
       'System Requirements (ID)':
@@ -343,7 +442,7 @@ The Restaurant App is a valuable tool for anyone who wants to order food from th
     vertical: false,
   ),
   Project(
-    id: '7',
+    id: 'ad77825f-158d-4515-b58e-142dc4e8102d',
     name: 'Dart Restaurant API',
     description: '''
 **Dart Restaurant API**
@@ -387,7 +486,15 @@ I am happy to share more details about the Dart Restaurant API if you are intere
 ''',
     shortDescription:
         'API for Restaurant App built with Dart with Shelf package',
-    tags: ['Dart', 'Shelf', 'PostgreSQL', 'Firebase', 'Redis', 'JWT'],
+    tags: [
+      'Dart',
+      'Shelf',
+      'PostgreSQL',
+      'Firebase',
+      'Redis',
+      'JWT',
+      'RESTful API'
+    ],
     images: [
       'https://cdn.azlir.me/dart_restaurant-api/dart_restaurant-api-0.webp',
       'https://cdn.azlir.me/dart_restaurant-api/dart_restaurant-api-1.webp',

@@ -222,7 +222,7 @@ class ProjectDetailPage extends StatelessWidget {
                                         'apps.apple.com' => 'App Store',
                                         'www.microsoft.com' =>
                                           'Microsoft Store',
-                                        _ => 'Visit',
+                                        _ => link,
                                       },
                                     ),
                                   ),

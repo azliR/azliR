@@ -53,13 +53,13 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   @override
   void initState() {
-    final homeState = ref.read(homeProvider);
     var currentPage = 0;
 
     _pageController.addListener(() {
       final page = _pageController.page?.round() ?? 0;
 
       if (page != currentPage && page < Section.values.length) {
+        final homeState = ref.read(homeProvider);
         final section = Section.values[page];
 
         ref.read(homeProvider.notifier)
