@@ -110,7 +110,7 @@ class ProjectDetailPage extends StatelessWidget {
                             md.ExtensionSet.gitHubFlavored.blockSyntaxes,
                             [
                               md.EmojiSyntax(),
-                              ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes
+                              ...md.ExtensionSet.gitHubFlavored.inlineSyntaxes,
                             ],
                           ),
                         ),
@@ -171,7 +171,7 @@ class ProjectDetailPage extends StatelessWidget {
                                     _ => 'Source',
                                   },
                                 ),
-                              )
+                              ),
                             ],
                             if (project.documents != null) ...[
                               const SizedBox(height: 24),
@@ -240,7 +240,7 @@ class ProjectDetailPage extends StatelessWidget {
           ),
           const SliverToBoxAdapter(
             child: SizedBox(height: 64),
-          )
+          ),
         ],
       ),
     );

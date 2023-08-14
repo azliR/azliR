@@ -44,7 +44,7 @@ class ProjectsSection extends ConsumerWidget {
               onPressed: () => launchUrl(Uri.parse('https://github.com/azliR')),
               icon: Icon(MdiIcons.github),
               label: const Text('GitHub Profile'),
-            )
+            ),
           ],
         ),
         const SizedBox(height: 16),

@@ -42,7 +42,7 @@ class HomeSection extends StatelessWidget {
               padding: EdgeInsets.all(24),
               child: Icon(Icons.expand_more_rounded),
             ),
-          )
+          ),
         ],
       ),
     );

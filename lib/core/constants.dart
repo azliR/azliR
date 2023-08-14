@@ -33,6 +33,7 @@ Sholawatan is a great way to learn about and listen to shalawat, and it is a val
       'Flutter',
       'DDD Architecture',
       'State Management',
+      'Dependency Injection',
       'Firebase',
     ],
     platforms: [
@@ -91,7 +92,7 @@ OutClass has the following features:
 
 OutClass was built using the following technologies:
 
-* **Vue3:** The Vue3 framework was used to build the front end of OutClass. Vue3 is a modern JavaScript framework that is easy to use and maintain.
+* **Vue:** The Vue framework was used to build the front end of OutClass. Vue is a modern JavaScript framework that is easy to use and maintain.
 * **Pinia:** Pinia is a state management library that was used to manage the state of OutClass. Pinia is lightweight and easy to use, making it a good choice for small to medium-sized apps.
 * **IndexedDB:** IndexedDB is a web API that was used to store files offline in OutClass. IndexedDB is a reliable and scalable way to store data offline.
 * **GoFiber:** GoFiber is a web framework that was used to build the backend of OutClass. GoFiber is a high-performance and scalable web framework that is well-suited for building web apps.
@@ -102,7 +103,7 @@ OutClass is a valuable tool for students who want to stay organized and producti
 
 Here are some specific skills that I demonstrated in the development of OutClass:
 
-* **Web development:** I used Vue3, Pinia, IndexedDB, GoFiber, MongoDB, and Redis to build OutClass. These are all modern and popular technologies that are used to build web apps.
+* **Web development:** I used Vue, Pinia, IndexedDB, GoFiber, MongoDB, and Redis to build OutClass. These are all modern and popular technologies that are used to build web apps.
 * **State management:** I used Pinia to manage the state of OutClass. Pinia is a lightweight and easy-to-use state management library that is a good choice for small to medium-sized apps.
 * **Offline storage:** I used IndexedDB to store files offline in OutClass. IndexedDB is a reliable and scalable way to store data offline.
 
@@ -110,7 +111,7 @@ I am confident that my skills and experience in developing OutClass would be a v
 ''',
     shortDescription:
         'OutClass is a web app that helps students organize their classwork and collaborate with each other that solves the problems of forgotten assignments, disorganized files, and difficult-to-remember class schedules.',
-    tags: ['Vue', 'Go', 'State Management', 'MongoDB', 'Redis', 'IndexedDB'],
+    tags: ['Vue', 'State Management', 'IndexedDB'],
     platforms: ['Web'],
     sourceCode: 'https://github.com/azliR/vue_outclass',
     visits: ['https://outclass.azlir.my.id'],
@@ -131,6 +132,54 @@ I am confident that my skills and experience in developing OutClass would be a v
       'https://cdn.azlir.me/vue_outclass/vue_outclass-13.webp',
     ],
     vertical: true,
+  ),
+  Project(
+    id: '09df9ac1-f94f-4960-aa0a-0551884bac5c',
+    name: 'OutClass Mobile',
+    description: '''
+**OutClass Mobile**
+
+I developed the OutClass Mobile app, a mobile app that helps students organize their classwork and collaborate with each other. OutClass Mobile solves the problems of forgotten assignments, disorganized files, and difficult-to-remember class schedules.
+
+The app is built using Flutter with BloC library as state management, Injectable and GetIt as dependency injection, GoFiber in backend, MongoDB for database, and Redis for JWT.
+
+OutClass Mobile has the following features:
+
+* **Classroom management:** Users can create classrooms and manage them, including adding and removing students, creating and editing tasks, and viewing a list of all tasks in the classroom.
+* **File organization:** Users can upload files to their classrooms and organize them into folders. Files can be stored offline using IndexedDB.
+* **Task management:** Users can create, edit, delete, and view tasks in their classrooms. Tasks can be assigned due dates and reminders.
+
+The development of the OutClass Mobile app demonstrates the following skills:
+
+* **Flutter development:** I used Flutter to build the OutClass Mobile app. Flutter is a cross-platform mobile development framework that is easy to use and maintain.
+* **BloC library:** I used the BloC library to manage the state of the OutClass Mobile app. BloC is a popular state management library for Flutter that is easy to learn and use.
+* **Dependency injection:** I used Injectable and GetIt to implement dependency injection in the OutClass Mobile app. Dependency injection is a software design pattern that makes it easy to test and maintain code.
+* **Go development:** I used GoFiber to build the backend API for the OutClass Mobile app. GoFiber is a high-performance and scalable web framework that is well-suited for building APIs.
+* **MongoDB:** I used MongoDB to store data in the OutClass Mobile app. MongoDB is a flexible and scalable database that is a good choice for storing data in mobile apps.
+* **Redis:** I used Redis to store JWT tokens in the OutClass Mobile app. Redis is a fast and reliable key-value store that is a good choice for storing short-lived data.
+
+I am proud of the work that I did on the OutClass Mobile app, and I believe that it demonstrates my skills as a software developer. I am confident that my skills and experience in developing the OutClass Mobile app would be a valuable asset to any team.
+''',
+    shortDescription:
+        'OutClass Mobile is a mobile app that helps students organize their classwork and collaborate with each other, built using Flutter with BloC and Injectable.',
+    tags: ['Flutter', 'State Management', 'Dependency Injection'],
+    platforms: ['Android', 'iOS'],
+    sourceCode: 'https://github.com/azliR/flutter_outclass',
+    visits: ['https://github.com/azliR/flutter_outclass/releases'],
+    images: [
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-0.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-1.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-2.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-3.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-4.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-5.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-6.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-7.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-8.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-9.webp',
+      'https://cdn.azlir.me/flutter_outclass/flutter_outclass-10.webp',
+    ],
+    vertical: false,
   ),
   Project(
     id: '16c9bf86-74c6-4125-991c-92fb9499d6b9',
@@ -163,7 +212,7 @@ I am proud of the work that I did on the OutClass API, and I believe that it dem
         'The OutClass API is a RESTful API that provides a backend for the OutClass app, built using GoFiber, MongoDB, and Redis.',
     sourceCode: 'https://github.com/azliR/gofiber_outclass-api',
     visits: [
-      'https://god.gw.postman.com/run-collection/8199375-ab9fdf9c-b168-4865-86d4-7517b3df9509?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D8199375-ab9fdf9c-b168-4865-86d4-7517b3df9509%26entityType%3Dcollection%26workspaceId%3D0e796c68-046f-4e51-a7f8-b80bb0834952'
+      'https://god.gw.postman.com/run-collection/8199375-ab9fdf9c-b168-4865-86d4-7517b3df9509?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D8199375-ab9fdf9c-b168-4865-86d4-7517b3df9509%26entityType%3Dcollection%26workspaceId%3D0e796c68-046f-4e51-a7f8-b80bb0834952',
     ],
     tags: ['Go', 'MongoDB', 'Redis', 'RESTful API'],
     images: [
@@ -213,7 +262,7 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
     ],
     documents: {
       'Journal article (ID)':
-          'https://docs.google.com/document/d/1BLEHKPyrybhqMCJxjNtQ5xlN5gNTKaxsVHlhqIVvlyw'
+          'https://docs.google.com/document/d/1BLEHKPyrybhqMCJxjNtQ5xlN5gNTKaxsVHlhqIVvlyw',
     },
     images: [
       'https://cdn.azlir.me/flutter_compress_it/flutter_compress_it-0.webp',
@@ -402,7 +451,14 @@ The development of the Restaurant App demonstrates the following skills:
 
 The Restaurant App is a valuable tool for anyone who wants to order food from their favorite restaurants without having to worry about queues or full tables. The app is easy to use and features a number of innovative features that make it a valuable addition to any smartphone.
 ''',
-    tags: ['Flutter', 'Firebase', 'State Management', 'Localizations', 'Maps'],
+    tags: [
+      'Flutter',
+      'Firebase',
+      'State Management',
+      'Dependency Injection',
+      'Localizations',
+      'Maps',
+    ],
     platforms: ['Android', 'iOS', 'macOS', 'Windows', 'Linux', 'Web'],
     documents: {
       'System Requirements (ID)':
@@ -493,7 +549,7 @@ I am happy to share more details about the Dart Restaurant API if you are intere
       'Firebase',
       'Redis',
       'JWT',
-      'RESTful API'
+      'RESTful API',
     ],
     images: [
       'https://cdn.azlir.me/dart_restaurant-api/dart_restaurant-api-0.webp',

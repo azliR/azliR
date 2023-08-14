@@ -66,7 +66,7 @@ class ContactsSection extends StatelessWidget {
                     label: const Text('+62 896-6095-2861'),
                   ),
                 ],
-              )
+              ),
             ],
           ),
         ),

@@ -50,7 +50,7 @@ I look forward to working with you to design and provide the right solution to f
                           ),
                       textAlign: TextAlign.justify,
                     ),
-                  )
+                  ),
                 ],
               );
             },

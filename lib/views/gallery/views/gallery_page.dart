@@ -35,7 +35,7 @@ class _GalleryPageState extends State<GalleryPage> {
       bindings: {
         const SingleActivator(LogicalKeyboardKey.escape): () {
           Navigator.pop(context);
-        }
+        },
       },
       child: Focus(
         autofocus: true,
