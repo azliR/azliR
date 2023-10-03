@@ -81,6 +81,8 @@ class _HomePageState extends ConsumerState<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+
     final homeNotifier = ref.watch(homeProvider.notifier);
     final selectedSection =
         ref.watch(homeProvider.select((value) => value.selectedSection));
@@ -168,6 +170,21 @@ class _HomePageState extends ConsumerState<HomePage> {
                     ProjectsGrid(
                       crossAxisCount: max(constraints.maxWidth ~/ 300, 1),
                     ),
+                    const SliverPadding(padding: EdgeInsets.all(8)),
+                    SliverToBoxAdapter(
+                      child: Center(
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            const Text('Made with '),
+                            Icon(Icons.favorite, color: colorScheme.primary),
+                            const Text(' using '),
+                            const FlutterLogo(),
+                          ],
+                        ),
+                      ),
+                    ),
+                    const SliverPadding(padding: EdgeInsets.all(16)),
                   ],
                 );
               },
