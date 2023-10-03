@@ -312,6 +312,9 @@ I believe that the use of Flutter in CompressIt has made the app more powerful, 
       'Journal article (ID)':
           'https://docs.google.com/document/d/1D0M_eBCysvMOeeEm3lOMzgGzjD7HPJepzKdev7H0XzM',
     },
+    visits: [
+      'https://colab.research.google.com/drive/1IAQYPiq_WQbfGwQkMAbxk1-cI0Uh2Ef-?usp=sharing',
+    ],
     images: [
       'https://cdn.azlir.me/murojaah-ml/murojaah-ml-0.webp',
       'https://cdn.azlir.me/murojaah-ml/murojaah-ml-1.webp',

@@ -154,7 +154,8 @@ class ProjectDetailPage extends StatelessWidget {
                               ),
                               const SizedBox(height: 8),
                               OutlinedButton.icon(
-                                onPressed: () {},
+                                onPressed: () =>
+                                    launchUrl(Uri.parse(project.sourceCode!)),
                                 icon: Icon(
                                   switch (Uri.parse(project.sourceCode!).host) {
                                     'github.com' => MdiIcons.github,
@@ -222,7 +223,7 @@ class ProjectDetailPage extends StatelessWidget {
                                         'apps.apple.com' => 'App Store',
                                         'www.microsoft.com' =>
                                           'Microsoft Store',
-                                        _ => link,
+                                        _ => Uri.parse(link).host,
                                       },
                                     ),
                                   ),
