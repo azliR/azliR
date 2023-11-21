@@ -1,0 +1,10 @@
+{
+  "workbench.colorCustomizations": {
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f",
+    "activityBar.background": "#2E2F19",
+    "titleBar.activeBackground": "#404223",
+    "titleBar.activeForeground": "#FAFAF6"
+  },
+  "dart.flutterSdkPath": ".fvm/versions/beta"
+}
