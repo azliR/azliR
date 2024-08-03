@@ -77,6 +77,7 @@ class ProjectTile extends StatelessWidget {
                   child: ClipRRect(
                     borderRadius: const BorderRadius.all(Radius.circular(8)),
                     child: CachedNetworkImage(
+                      alignment: Alignment.topCenter,
                       imageUrl: project.images.first,
                       placeholder: (context, url) {
                         return const Center(
