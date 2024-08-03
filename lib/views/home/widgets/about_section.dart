@@ -29,7 +29,7 @@ class AboutSection extends StatelessWidget {
                         'About me',
                         style:
                             Theme.of(context).textTheme.headlineLarge?.copyWith(
-                                  color: colorScheme.onBackground,
+                                  color: colorScheme.onSurface,
                                 ),
                       ),
                     ),
@@ -46,7 +46,7 @@ I have worked in other fields as well such as web, backend, database and machine
 I look forward to working with you to design and provide the right solution to fit your budget, deadlines, and requirements. Together, let's turn your creative ideas into extraordinary products!
           ''',
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                            color: colorScheme.onBackground,
+                            color: colorScheme.onSurface,
                           ),
                       textAlign: TextAlign.justify,
                     ),

@@ -25,8 +25,8 @@ class ProjectsSection extends ConsumerWidget {
       children: [
         Text(
           'My Projects',
-          style: textTheme.headlineMedium
-              ?.copyWith(color: colorScheme.onBackground),
+          style:
+              textTheme.headlineMedium?.copyWith(color: colorScheme.onSurface),
         ),
         const SizedBox(height: 16),
         Wrap(
@@ -37,7 +37,7 @@ class ProjectsSection extends ConsumerWidget {
             Text(
               'You can find my projects on my ',
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    color: colorScheme.onBackground,
+                    color: colorScheme.onSurface,
                   ),
             ),
             FilledButton.tonalIcon(

@@ -28,7 +28,7 @@ class HomeSection extends StatelessWidget {
                       text: 'Rizal Hadiyansah',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
-                        color: colorScheme.onBackground,
+                        color: colorScheme.onSurface,
                       ),
                     ),
                   ],

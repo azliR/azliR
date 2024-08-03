@@ -30,8 +30,8 @@ class MyApp extends ConsumerWidget {
         useMaterial3: true,
         colorScheme: colorScheme,
         textTheme: GoogleFonts.robotoTextTheme().apply(
-          bodyColor: colorScheme.onBackground,
-          displayColor: colorScheme.onBackground,
+          bodyColor: colorScheme.onSurface,
+          displayColor: colorScheme.onSurface,
         ),
       ),
       home: const HomePage(),
